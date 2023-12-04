@@ -84,7 +84,7 @@ hideFirstUl();
        */
 
 const paintItGreen = function () {
-  const greenColor = document.querySelectorAll("ul");
+  const greenColor = document.getElementsByTagName("ul");
   for (let i = 0; i < greenColor.length; i++) {
     greenColor[i].style.backgroundColor = "green";
   }
@@ -160,8 +160,7 @@ const generateTable = function () {
     tbody.appendChild(row);
   }
   newTable.appendChild(tbody);
-  body.appendChild(newTable);
-  newTable.setAttribute("id", "tableArea");
+  document.getElementById("tableArea").appendChild(newTable);
 };
 
 generateTable();
