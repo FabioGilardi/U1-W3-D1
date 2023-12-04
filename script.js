@@ -129,9 +129,9 @@ const generateTable = function () {
       switch (j) {
         case 0:
           let cell = document.createElement("td");
-          let cellText = document.createTextNode("Immagine");
-
-          cell.appendChild(cellText);
+          let image = document.createElement("img");
+          image.setAttribute("src", "http://placekitten.com/80");
+          cell.appendChild(image);
           row.appendChild(cell);
           break;
         case 1:
@@ -179,9 +179,9 @@ const addRow = function (image, product, quantity, price) {
       switch (j) {
         case 0:
           let cell = document.createElement("td");
-          let cellText = document.createTextNode(image);
-
-          cell.appendChild(cellText);
+          let image = document.createElement("img");
+          image.setAttribute("src", "http://placekitten.com/80");
+          cell.appendChild(image);
           row.appendChild(cell);
           break;
         case 1:
@@ -211,7 +211,7 @@ const addRow = function (image, product, quantity, price) {
   }
 };
 
-addRow("image", "kitten", "1", "none");
+addRow("", "kitten", "1", "none");
 
 /* ESERCIZIO 14
        Crea una funzione che nasconda le immagini della tabella quando eseguita
@@ -224,7 +224,7 @@ const hideAllImages = function () {
   }
 };
 
-hideAllImages();
+// hideAllImages();
 
 /* EXTRA ESERCIZIO 15
        Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
